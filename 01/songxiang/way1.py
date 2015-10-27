@@ -7,11 +7,12 @@ if max1 == max2:
 	s = 0
 elif max1 < max2:
 	max1,max2 = max2,max1
-#任意取两个值，并把最大值给max1
+#pick 2 numbers in the num_list random
 for i in num_list:
 	if i > max1:
 		max2 = max1
 		max1 = i
+#if the picked number are same, go on 
 	elif s == 0 and i < max1:
 		max2 = i
 		s = 1
