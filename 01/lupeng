@@ -1,0 +1,11 @@
+str_list = ['C','js','python','js','css','js','html','node','js','python','js','css','js','html','node','js','python','js','css','js','html','node','css','js','html','node','js','python','js','css','js','html','node','js','python','js','css','js','html','node']
+
+str_dict = {}
+
+for s in str_list:
+    if s in str_dict:
+        str_dict[s] = str_dict[s] + 1
+    else:
+        str_dict[s] = 1
+for r in str_dict:
+    print '%s count is %s times' %(r,str_dict[r])
