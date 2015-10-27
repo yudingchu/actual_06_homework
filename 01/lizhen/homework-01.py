@@ -8,14 +8,14 @@ a=b=0
 
 for i in name_list:
 #when a is lower
-  if a < i:		
-      b = a		#the second max 
-	  a = i 	#the first max
+    if a < i:		
+        b = a		#the second max 
+        a = i 	#the first max
 # when a is higher
-  elif a > i:
-      if b < i:
-	      b = i  #the second max 
-  else:
-       pass      # the a equal i
+    elif a > i:
+        if b < i:
+            b = i  #the second max 
+    else:
+        pass      # the a equal i
 print "The first max: ",a
 print "The second max: ",b
