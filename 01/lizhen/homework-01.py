@@ -4,18 +4,18 @@
 #Homework for class 1 
 
 name_list = [1,2,3,4,12,3,1,3,21,2,2,3,4111,22,3333,444,111,4,5,777,65555,45,33,45]
-a=b=0
+max_1=max_2=0
 
 for i in name_list:
 #when a is lower
-    if a < i:		
-        b = a		#the second max 
-        a = i 	#the first max
+    if max_1 < i:		
+        max_2 = max_1		#the second max 
+        max_1 = i 	#the first max
 # when a is higher
-    elif a > i:
-        if b < i:
-            b = i  #the second max 
+    elif max_1 > i:
+        if max_2 < i:
+            max_2 = i  #the second max 
     else:
         pass      # the a equal i
-print "The first max: ",a
-print "The second max: ",b
+print "The first max: ",max_1
+print "The second max: ",max_2
