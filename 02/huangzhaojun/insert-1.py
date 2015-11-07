@@ -15,7 +15,7 @@ while True:
                     if data > data_list[-1]:
                         data_list.append(data)
                         break
-                    elif data > a[num]:
+                    elif data > data_list[num]:
                         continue
                     elif data <= data_list[num]:
                         data_list.insert(num,data)
