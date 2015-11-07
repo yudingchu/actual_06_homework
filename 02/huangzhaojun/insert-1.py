@@ -14,6 +14,7 @@ while True:
             for num in range(len(data_list)):
                     if data > data_list[-1]:
                         data_list.append(data)
+                        break
                     elif data > a[num]:
                         continue
                     elif data <= data_list[num]:
