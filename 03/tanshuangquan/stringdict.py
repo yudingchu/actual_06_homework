@@ -11,23 +11,17 @@ for i in str1:
     else:
         s_dict[i] += 1
 
-#for j,k in s_dict.items():
-#    print j,k
-print s_dict
 s_keys=s_dict.keys()
 s_values=s_dict.values()
 s_values2=s_dict.values()
-print s_values
 
 for k in (range(len(s_values)-1)):
     for j in (range(len(s_values)-1)):
         if s_values[j]>s_values[j+1]:
             s_values[j],s_values[j+1] = s_values[j+1],s_values[j]
 
-print s_values
 jsq=0
 cs_v=s_values[-1:-11:-1]
-print cs_v
 for topten in cs_v:
     if jsq > 1:
        jsq -= 1
