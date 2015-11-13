@@ -1,0 +1,8 @@
+nums =  [1,2,3,26,12,36,10,30,21,25,29,39,4111,22,3333,444,111,4,5,777,65555,45,33,46]
+for i in range(len(nums)):
+    for j in range(len(nums)-1):
+        if nums[j]>nums[j+1]:
+            tmp = nums[j]
+            nums[j] = nums[j+1]
+            nums[j+1] = tmp
+print nums
