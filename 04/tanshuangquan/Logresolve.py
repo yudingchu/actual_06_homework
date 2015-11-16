@@ -1,5 +1,4 @@
 logfile=open("www_access_20140823.log","r")
-#logfile=open("log","r")
 loglist=logfile.readlines()
 logfile.close()
 logdict={}
