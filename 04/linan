@@ -5,7 +5,7 @@ logfile.close()
 log_dict = {}
 re_dict = {}
 log_sort = []
-
+end_log = []
 for log_line in log_list:
     line_list = log_line.split(' ')
     line_tuple = (line_list[8],line_list[6],line_list[0])
@@ -27,4 +27,11 @@ for k in log_dict:
             re_dict[re_k].append(re_v)
     else:
         re_dict[re_k] = re_v
-print re_dict
+
+for key in re_dict:
+    log_sort.append(key)
+
+log_sort.sort()
+
+for num in log_sort[:10]:
+    print re_dict[num]
