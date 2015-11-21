@@ -51,12 +51,13 @@ access_list = []
 # [[ip_addr, http_status, request_url, request_times], ]
 # 
 for k,v in log_access_dict.items():
-    access_list.append([k[1], k[2], k[0], v])
+    access_list.append([k[1], k[2], (k[0], v)])
 
 def r_times(item_list):
-    return item_list[3]
+    return item_list[2][1]
 
 access_sorted_list = sorted(access_list, key = r_times, reverse = True)
 
 for i in xrange(10):
-    print access_sorted_list[i][2], access_sorted_list[i][3]
+    # print access_sorted_list[i][2], access_sorted_list[i][3]
+    print access_sorted_list[i]
