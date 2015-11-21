@@ -17,7 +17,7 @@ __author__ = "seerjk"
 
 nginx_log_path = 'www_access_20140823.log'
 log_access_dict = {}
-# {[ip_addr, http_status, request_url]: request_times; }
+# {(ip_addr, http_status, request_url): request_times; }
 
 try:
     with open(nginx_log_path) as f:
@@ -48,7 +48,7 @@ if log_access_dict == {}:
 #     print output_list
 
 access_list = []
-# [[ip_addr, http_status, request_url, request_times], ]
+# [[ip_addr, http_status, (request_url, request_times)], ]
 # 
 for k,v in log_access_dict.items():
     access_list.append([k[1], k[2], (k[0], v)])
