@@ -19,6 +19,8 @@ def my_split(input_str):
                         	lst.append(tmp)
                 	lst.append(i)
                 	tmp = ''
+	if tmp != '':
+		lst.append(tmp)
 	return lst
 
 def nbl(lst_cont):
@@ -83,7 +85,3 @@ input_str = raw_input('INPUT:')
 lst_cont = my_split(input_str)
 s2 = nbl(lst_cont)
 print count_op(s2)
-
-
-
-	
