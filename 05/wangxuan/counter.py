@@ -41,7 +41,7 @@ def nbl(lst_cont):
 			if s1[-1] == '(':
 				s1.append(process_x)
 			elif process_x == '*' or process_x == '/':
-				if s[-1] == '+' or s[-1] == '-' or s[-1] == '#':					
+				if s1[-1] == '+' or s1[-1] == '-' or s1[-1] == '#':					
 					s1.append(process_x)
 				else:
 					while (s1[-1] != '(' and s1[-1] != '+' and s1[-1] != '-' and s1[-1] != '#'):
@@ -71,17 +71,21 @@ def count_op(s2):
 				result = cal1 + cal2
 				cal.append(result)
 			if op == '-':
-				result = cal1 - cal2
+				result = cal2 -cal1
 				cal.append(result)
 			if op == '*':
 				result = cal1 * cal2
 				cal.append(result)
 			if op == '/':
-				result = cal1 / cal2
+				result = cal2 / cal1
 				cal.append(result)
 	return cal	
 
-input_str = raw_input('INPUT:')
-lst_cont = my_split(input_str)
-s2 = nbl(lst_cont)
-print count_op(s2)
+while True:
+	input_str = raw_input('INPUT:')
+	if input_str == 'exit':
+		break
+	else:
+		lst_cont = my_split(input_str)
+		s2 = nbl(lst_cont)
+		print count_op(s2)
