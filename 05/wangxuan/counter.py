@@ -79,8 +79,8 @@ def count_op(s2):
 			if op == '/':
 				result = cal2 / cal1
 				cal.append(result)
-	return cal	
-
+	return cal.pop()	
+print '''This is a small calculator.Enter 'exit' to exit the program.'''
 while True:
 	input_str = raw_input('INPUT:')
 	if input_str == 'exit':
