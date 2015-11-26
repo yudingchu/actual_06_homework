@@ -23,41 +23,42 @@ def opearte(string):
 		else:
 			return 'error, 有非法字符 '
 	number_list.append(number_str)
-	print number_list
-	# number_list = pre_muli(number_list)
+	number_list = pre_muli(number_list)
 	number_list = pre_plus(number_list)
-	
-
-# def pre_muli(number_list):
-# 	while len(number_list) > 1:
-# 		count = 0
-# 		for i in number_list:
-# 			if i == '*' or '/':
-# 				number_new=[]
-# 				tem = caculate(number_list[count-1],number_list[count],number_list[count+1])
-# 				print number_list
-# 				number_new.append(tem)
-# 				number_list[count-1:count+2] = number_new
-# 				number_list = pre_muli(number_list)
-# 				return number_list
-# 			count = count + 1
-# 		return number_list
-def pre_plus(number_list):
-	while len(number_list) > 1:
-		count = 0
-		for i in number_list:
-			if i == '+' or '+':
-				number_new =[]
-				tem = caculate(number_list[count-1],number_list[count],number_list[count+1])
-				number_new.append(tem)
-				number_list[count-1:count+2] = number_new
-				pre_plus(number_list)
-				return number_list
-			count = count + 1
+	return number_list
+def pre_muli(number_list):
+	count = 0
+	if len(number_list) == 1:
 		return number_list
+	for i in number_list:
+		if i == '*' or i =='/':
+			number_new=[]
+			print count
+			tem = caculate(number_list[count-1],number_list[count],number_list[count+1])
+			number_new.append(tem)
+			number_list[count-1:count+2] = number_new
+			number_list = pre_muli(number_list)
+			return number_list
+		count = count + 1
+	return number_list
+def pre_plus(number_list):
+	count = 0
+	if len(number_list) == 1:
+		return number_list
+	for i in number_list:
+		if i == '+' or i == '-':
+			number_new =[]
+			tem = caculate(number_list[count-1],number_list[count],number_list[count+1])
+			number_new.append(tem)
+			number_list[count-1:count+2] = number_new
+			pre_plus(number_list)
+			return number_list
+		count = count + 1
+	return number_list
 if __name__ == '__main__':
-	a = '1+2+3+4+3'
-	opearte(a)
+	a = '1+2*4'
+	result = opearte(a)
+	print result
 
 
 
