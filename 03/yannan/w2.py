@@ -35,5 +35,6 @@ while m < len(list2):
 #打印TOP10
 top = 0
 while top < 10:
-    print list2[top]
+    if top < len(list2):
+        print list2[top]
     top += 1
