@@ -12,6 +12,9 @@ def analysis_expression(exp_str):
     if error in expression: return -1
     else: return exp_list (numbers, operators)
     '''
+    if len(exp_str) == 0:
+        return -1
+    
     # delete blank in exp_str
     tmp_list = exp_str.split(' ')
     exp_str = ''.join(tmp_list)
